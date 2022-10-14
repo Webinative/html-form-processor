@@ -6,9 +6,16 @@
 </head>
 <body>
     <h3>Submitted Data: </h3>
-    {% for k,v in postdata.items() %}
-        {{k}} - {{v[0]}}<br>
+    {% for field, value in postdata.items() %}
+        <strong>{{ field }}</strong>
+        {% if value is iterable  %}
+            {% for val in value %}
+                {{ val }}
+            {% endfor %}
+        {% else %}
+            {{ value }}
+        {% endif %}
+        <br>
     {% endfor %}
-
 </body>
 </html>
