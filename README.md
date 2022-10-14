@@ -23,7 +23,7 @@ mkvirtualenv flask_app
 
 pip3 install Flask
 
-# TODO: Edit templates/form.html to place your form.
+# TODO: Edit flask_app/templates/form.html to place your form.
 
 # run the flask app
 flask --app flask_app --debug run
