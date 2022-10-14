@@ -9,9 +9,235 @@
 </head>
 
 <body>
-    <h1>HTML Forms</h1>
+    <div style="max-width: 80ch">
+        <h1>Job Portal</h1>
 
-    <p>Create your form here.</p>
+        <h2>Signup</h2>
+
+        <form method="post" action="">
+            <fieldset>
+                <legend>Personal Info</legend>
+
+                <div>
+                    <label for="first-name">First Name</label><br>
+                    <input type="text" id="first-name" name="first_name" placeholder="John" maxlength="32" required />
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="last-name">Last Name</label><br>
+                    <input type="text" id="last-name" name="last_name" placeholder="Doe" maxlength="32" required />
+                </div>
+
+                <br>
+
+                <div>
+                    <span>Gender</span><br>
+                    <input type="radio" name="gender" id="gender-male" value="M">
+                    <label for="gender-male">Male</label>
+
+                    <input type="radio" name="gender" id="gender-female" value="F">
+                    <label for="gender-female">Female</label>
+
+                    <input type="radio" name="gender" id="gender-dnd" value="N" checked>
+                    <label for="gender-dnd">Do not wish to disclose</label>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="dob">Date of birth</label><br>
+                    <input type="date" name="date_of_birth" id="dob" required>
+                </div>
+
+                <br>
+
+                <datalist id="cities">
+                    <option value="Chennai"></option>
+                    <option value="Kanchipuram"></option>
+                    <option value="Coimbatore"></option>
+                    <option value="Thirunelveli"></option>
+                </datalist>
+
+                <div>
+                    <label for="city">Town/City</label><br>
+                    <input type="text" list="cities" name="city" id="city">
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Contact</legend>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="john.doe@example.com" maxlength="155"
+                        required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="phone">Phone</label><br>
+                    <span>Use the format "99550-12345"</span><br>
+                    <input type="tel" name="phone" id="phone" placeholder="95500-12345" pattern="[\d]{5}-[\d]{5}"
+                        required>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Education</legend>
+
+                <div>
+                    <label for="education">Highest education</label>
+                    <select name="education" id="education">
+                        <option value="-1">Select</option>
+                        <optgroup label="School">
+                            <option value="10">Class X</option>
+                            <option value="12">Class XII</option>
+                        </optgroup>
+                        <optgroup label="College">
+                            <option value="UG">Undergraduate (Bachelor's degree equivalent)</option>
+                            <option value="PG">Postgraduate (Master's degree equivalent)</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Skillset</legend>
+
+                <input type="checkbox" name="html" id="html">
+                <label for="html">HTML</label>
+                <br>
+
+                <input type="checkbox" name="css" id="css">
+                <label for="css">CSS</label>
+                <br>
+
+                <input type="checkbox" name="javascript" id="javascript">
+                <label for="javascript">JavaScript</label>
+                <br>
+
+                <input type="checkbox" name="jquery" id="jquery">
+                <label for="jquery">jQuery</label>
+                <br>
+
+                <input type="checkbox" name="react" id="react">
+                <label for="react">React</label>
+                <br>
+
+                <input type="checkbox" name="vue" id="vue">
+                <label for="vue">Vue</label>
+                <br>
+
+                <input type="checkbox" name="angular" id="angular">
+                <label for="angular">Angular</label>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Interests</legend>
+
+                <input type="radio" name="interested_in" id="interested-in-frontend" checked>
+                <label for="interested-in-frontend">Frontend only</label>
+                <br>
+
+                <input type="radio" name="interested_in" id="interested-in-backend">
+                <label for="interested-in-backend">Backend only</label>
+                <br>
+
+                <input type="radio" name="interested_in" id="interested-in-fullstack">
+                <label for="interested-in-fullstack">Full-stack</label>
+                <br>
+                <br>
+
+                <input type="checkbox" name="add_to_groups" id="add-to-groups">
+                <label for="add-to-groups">Add me to relevant Telegram groups/channels.</label>
+                <br>
+
+                <input type="checkbox" name="add_to_newsletter" id="add-to-newsletter">
+                <label for="add-to-newsletter">Add me to relevant weekly newsletters.</label>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Experience</legend>
+
+                <div>
+                    <label for="internship">Internship (in months)</label><br>
+                    <span>0</span>
+                    <input type="range" name="internship" id="internship" min="0" max="6" step="1" value="0">
+                    <span>6</span>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="employment">Employment (in months)</label><br>
+                    <span>0</span>
+                    <input type="range" name="employment" id="employment" min="0" max="24" step="6" value="0">
+                    <span>24</span>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Links</legend>
+
+                <div>
+                    <label for="git-profile">Git Profile</label><br>
+                    <span>Link to your Github or Gitlab profile</span><br>
+                    <input type="url" name="git_profile" id="git-profile">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="website">Personal website</label><br>
+                    <input type="url" name="website" id="website">
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Attachments</legend>
+
+                <div>
+                    <label for="photo">Photo</label><br>
+                    <input type="file" name="photo" id="photo" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="resume">Resume</label><br>
+                    <input type="file" name="resume" id="resume" required>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <div>
+                <input type="checkbox" name="consent" id="consent">
+                <label for="consent">I consent to sharing my profile with other recruiters.</label>
+            </div>
+            <br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
 </body>
 
 </html>
